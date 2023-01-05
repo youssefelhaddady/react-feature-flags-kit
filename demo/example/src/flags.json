@@ -1,0 +1,4 @@
+[
+  { "name": "feat", "isActive": true },
+  { "name": "featDisabled", "isActive": false }
+]

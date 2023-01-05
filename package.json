@@ -1,50 +1,43 @@
 {
-  "name": "react-feature-flags-kit",
+  "name": "react-feature-flags-package",
   "version": "0.0.1",
   "description": "Manage react features flags easily and effectively",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
+
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+ 
+ "author": {
+   "name": "Youssef EL HADDADY",
+   "email": "YoussefELHADDADY@gmail.com"
+ },
+ "repository": {
+   "type": "git",
+   "url": "https://github.com/youssefelhaddady/react-feature-flags-kit"
+ },
+
+  "workspaces": [
+    "lib/*",
+    "demo/*"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rollup -c"
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write ."
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^14.0.1",
-    "@rollup/plugin-typescript": "^8.5.0",
-    "@types/react": "^18.0.19",
-    "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rollup": "^2.79.0",
-    "rollup-plugin-dts": "^4.2.2",
-    "tslib": "^2.4.0",
-    "typescript": "^4.8.3"
+    "lib": "^4.3.3",
+    "prettier": "2.7.1",
+    "tsup": "6.2.3",
+    "turbo": "1.4.7",
+    "typescript": "4.8.3"
   },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "author": "Youssef EL HADDADY",
-  "license": "MIT",
-  "keywords": [
-    "react",
-    "feature",
-    "flags",
-    "toggles",
-    "feature",
-    "flags",
-    "feature",
-    "toggles",
-    "react",
-    "feature",
-    "flags",
-    "continuous",
-    "delivery",
-    "continuous",
-    "integration"
-  ]
+  "packageManager": "pnpm@7.16.1"
 }
