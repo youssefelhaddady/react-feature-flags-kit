@@ -17,7 +17,7 @@ const Feature: React.FC<FeatureProps> = ({
   renderOff,
 }) => (
   <FeatureFlagsContext.Consumer>
-    {features => (
+    {(features) => (
       <RenderFeature
         features={features}
         flag={flag}
